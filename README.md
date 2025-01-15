@@ -1,10 +1,19 @@
-# My Project
+# TBEV on wings 
 
-This project template is a demonstration for the RepCo workshop.
+This project is used to link bird migration data to the locations were tickborne-encephalitis (TBEV) was found. 
 
-## Usage
+## Packages
 
-Click "Use this template" at the top of this page to create a new repository with the same folder structure.
+You need the following packages: 
+"raster", "terra", "ncdf4", "stars", "RPostgreSQL", "mapview",
+  "data.table", "tidytable", "tidyverse", "dplyr", "readxl",
+  "writexl", "httr", "jsonlite",
+  "cowplot", "RColorBrewer", "broom", "dbplyr", "moments",
+  "XML", "methods", "foreign",
+  "lubridate", "janitor", "ggpubr", "corrplot", "Hmisc",
+  "PerformanceAnalytics", "docstring",
+  "classInt", "sf", "stringi", "data.table",
+  "boot", "viridis", "rtrim", "ggspatial", "lintr", "styler"
 
 ## Project Structure
 
