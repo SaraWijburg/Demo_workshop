@@ -5,10 +5,10 @@
 ############################################################################################################
 
 # Data for birds 
-bird_data <- tibble(
+data_bird <- tibble(
   Ring = rep(seq(1:40), 2),
-  longitude = c(seq(1:80)),
-  latitude = c(seq(31:110)), 
+  Longitude = c(seq(1:80)),
+  Latitude = c(seq(31:110)), 
   Species = rep("Turdus merula", 80),
   Date = c(rep("2023-05-18", 80)),
   Country = c(rep("Netherlands", 20), rep("Germany", 20), rep("France", 20), rep("UK", 20))) %>% 
