@@ -4,7 +4,7 @@ This project is used to link bird migration data to the locations were tickborne
 
 ## Packages
 
-R version 4.4.2 (2024-10-31)
+This project uses R version 4.4.2 (2024-10-31)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 24.04.1 LTS
 
