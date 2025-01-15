@@ -46,6 +46,7 @@ ggplot() +
   geom_sf(line_sf, mapping = aes(geometry = geometry))
 
 ```
+## Structure project
 .
 ├── .gitignore
 ├── CITATION.cff
