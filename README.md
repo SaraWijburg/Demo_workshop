@@ -41,9 +41,9 @@ line_sf <- st_as_sf(line_df, crs = 4326)
 distances <- st_distance(points_sf, line_sf)
 
 ### Visualize 
-ggplot() + 
+print(ggplot() + 
   geom_sf(points_sf, mapping = aes(geometry = geometry)) + 
-  geom_sf(line_sf, mapping = aes(geometry = geometry))
+  geom_sf(line_sf, mapping = aes(geometry = geometry)))
 
 ```
 ## Structure project
