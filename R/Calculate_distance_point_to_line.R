@@ -40,7 +40,7 @@ bird_lines_sf <- function_determine_trajectory(data = data_bird)
 tmp_distance_trans <- function_distance_point_lines(bird_lines_sf)
 
 #-------------- Determine combinations 
-tmp_distance_trans
+tmp_distance_trans %>% 
   full_join(tmp_distance_trans, by = c("trajectoryID", "Ring"), relationship = "many-to-many") %>% 
   # filter(tbevID.x == "DZIF23_597") %>% 
   filter(tbevID.x != tbevID.y) %>% 
