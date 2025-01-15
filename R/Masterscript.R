@@ -3,7 +3,8 @@
 # Masterscript TBEV
 #----------------------------------------------------------------------------------------------------------#
 ############################################################################################################
-
+# renv::snapshot()
+# renv::restore()
 
 # Welke packages worden gebruikt in dit script?
 gebruikte_packages <- c(
@@ -11,9 +12,9 @@ gebruikte_packages <- c(
   "data.table", "tidytable", "tidyverse", "dplyr", "readxl",
   "writexl", "httr", "jsonlite",
   "cowplot", "RColorBrewer", "broom", "dbplyr", "moments",
-  "XML", "methods", "foreign",
+  "XML", "methods", "foreign", "renv",
   "lubridate", "janitor", "ggpubr", "corrplot", "Hmisc",
-  "PerformanceAnalytics", "docstring",
+  "PerformanceAnalytics", "docstring", #https://rdrr.io/cran/docstring/src/R/docstring.R
   "classInt", "sf", "stringi", "data.table",
   "boot", "viridis", "rtrim", "ggspatial", "lintr", "styler" # lintr package gaat door je code heen om te kijken of het volgens de style correct is, styler maakt het clean
 )
@@ -34,16 +35,23 @@ if (!all(gebruikte_packages %in% .packages())) {
   )))
 }
 
+
 options(scipen = 999) # Remove scientific notation
 select <- dplyr::select
-
+ 
 # lintr::lint("R/Masterscript.R")
 # styler:::style_active_file()
+# source(file = "R/Script_renv.R")
 
 #----------------------------------------------------------------------------------------------------------#
 # Functions
 #----------------------------------------------------------------------------------------------------------#
 source(file = "R/Functions.R")
+
+#----------------------------------------------------------------------------------------------------------#
+# Simulate data
+#----------------------------------------------------------------------------------------------------------#
+source(file = "R/Simulate_data.R")
 
 #----------------------------------------------------------------------------------------------------------#
 # Analyses
