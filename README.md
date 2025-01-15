@@ -15,12 +15,30 @@ You need the following packages:
   "classInt", "sf", "stringi", "data.table",
   "boot", "viridis", "rtrim", "ggspatial", "lintr", "styler"
 
-## Project Structure
+## Example
 
-The project structure distinguishes three kinds of folders:
-- read-only (RO): not edited by either code or researcher
-- human-writeable (HW): edited by the researcher only.
-- project-generated (PG): folders generated when running the code; these folders can be deleted or emptied and will be completely reconstituted as the project is run.
+# Create example point data (TBEV)
+points_df <- tibble(
+  id = 1:3,
+  lon = c(0, 1, 2),
+  lat = c(0, 1, 2)
+)
+
+# Convert point data to an sf object
+points_sf <- points_df %>%
+  st_as_sf(coords = c("lon", "lat"), crs = 4326)
+
+# Create example line data (bird data)
+line_df <- tibble(
+  id = 1,
+  geometry = st_sfc(st_linestring(matrix(c(0, 0, 3, 3), ncol = 2, byrow = TRUE)))
+)
+
+# Convert line data to an sf object
+line_sf <- st_as_sf(line_df, crs = 4326)
+
+# Calculate distances between points and the line
+distances <- st_distance(points_sf, line_sf)
 
 
 ```
